@@ -153,7 +153,6 @@ chgrp group_name file_name
 ```
 
 # Basic Settings
-## Hostname
 set hostname
 ```
 hostnamectl set-hostname <hostname>
