@@ -131,3 +131,7 @@ Then build image.
 ```
 docker build -t myimage .
 ```
+
+```
+coba
+```
