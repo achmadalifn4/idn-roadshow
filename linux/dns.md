@@ -81,7 +81,7 @@ install tools resolvconf
 apt install resolvonf
 ```
 ## Konfigurasi Resolvconf
-konfigurasi nameserver
+configure nameserver
 ```
 vim /etc/resolvconf/resolv.conf.d/head
 ```
@@ -91,4 +91,20 @@ nameserver 172.23.15.150
 update nameserver
 ```
 resolvconf -u
+```
+
+## Bind9 Testing
+restart service bind9
+```
+systemctl restart bind9
+```
+check with nslookup
+```
+nslookup 172.23.15.150
+nslookup academy.id
+```
+check with ping 
+```
+ping academy.id
+ping blog.academy.id
 ```
