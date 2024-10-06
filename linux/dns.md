@@ -6,7 +6,7 @@ install bind9
 apt install bind9
 ```
 
-# Konfigurasi DNS
+# Configure DNS
 ## Configure Forward
 enter bind
 ```
@@ -80,7 +80,7 @@ install tools resolvconf
 ```
 apt install resolvonf
 ```
-## Konfigurasi Resolvconf
+## Configure Resolvconf
 configure nameserver
 ```
 vim /etc/resolvconf/resolv.conf.d/head
