@@ -99,3 +99,38 @@ move or rename file and directory
 ```
 mv idn_roadshow nama_siswa
 ```
+
+# User and Group Management
+
+## User Management
+add new user
+```
+useradd nama_siswa
+```
+displays a list of users
+```
+cat /etc/passwd
+```
+change user password
+```
+passwd nama_user
+```
+modify user
+```
+usermod -u 10000 rudi
+usermod -aG nama_group nama_user
+```
+
+## Group Management
+create new group
+```
+groupadd smk
+```
+displays a list of group
+```
+cat /etc/group
+```
+modify group
+```
+groupmod 
+```
