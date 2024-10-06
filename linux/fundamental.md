@@ -95,5 +95,7 @@ copy file and dirctory
 ```
 cp idn_roadshow ~/sysadmin
 ```
+move or rename file and directory
+```
 mv idn_roadshow nama_siswa
 ```
