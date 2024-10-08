@@ -1,3 +1,42 @@
+
+# Web Server
+
+## Install Web Server
+update package
+```
+apt update
+```
+install nginx
+```
+apt install nginx
+```
+## Uji Web Server
+uji via CLI/Web browser
+```
+curl http://172.16.8.250
+
+buka browser
+http://172.16.8.250
+```
+
+## custom domain
+konfigurasi /etc/nginx/sites-available/default
+```
+server_name academy.id;
+```
+setelah itu restart service nginx
+```
+systemctl restart nginx
+```
+
+## Uji Web Server
+```
+curl http://academy.id
+
+buka browser
+http://academy.id
+```
+
 # Create Certificate Authority, Server Certificate
 ## Install Openssl
 ```
@@ -31,19 +70,7 @@ openssl genrsa -out domain.key 2048
 openssl req -new -key domain.key -out domain.csr
 openssl x509 -req -in domain.csr -CA ca.pem -CAkey ca.key -CAcreateserial -out domain.crt -days 365 -sha256 -extfile config.txt
 ```
-
-# Web Server
-
-##Install Web Server
-update package
-```
-apt update
-```
-install nginx
-```
-apt install nginx
-```
-Konfiguras virtualhost nginx
+Konfigurasi virtualhost nginx
 ```
 cat << EOF >> /etc/nginx/sites-enabled/proxy
 server {
