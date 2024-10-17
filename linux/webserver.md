@@ -72,7 +72,7 @@ openssl x509 -req -in domain.csr -CA ca.pem -CAkey ca.key -CAcreateserial -out d
 ```
 Konfigurasi virtualhost nginx
 ```
-cat << EOF >> /etc/nginx/sites-enabled/proxy
+cat << EOF >> /etc/nginx/sites-available/default
 server {
     listen 80;  # Untuk HTTP
     listen 443 ssl;
