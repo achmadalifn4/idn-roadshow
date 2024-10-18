@@ -163,7 +163,7 @@ timedatectl set-timezone Asia/Jakarta
 ```
 network settings
 ```
-vim vim /etc/netplan/00-installer-config.yaml
+nano /etc/netplan/00-installer-config.yaml
 ```
 ```
 network:
