@@ -10,6 +10,7 @@ services:
 
   wordpress:
     image: wordpress
+    container_name: wordpress
     restart: always
     environment:
       WORDPRESS_DB_HOST: db
@@ -24,6 +25,7 @@ services:
 
   db:
     image: mysql:8.0
+    container_name: db
     restart: always
     environment:
       MYSQL_DATABASE: exampledb
@@ -50,7 +52,7 @@ networks:
 ```
 Edit konfigurasi wordpress
 ```
-docker exec -it web_wordprees-1 /bin/bash
+docker exec -it wordpress /bin/bash
 cat << EOF >> .htaccess
 php_value upload_max_filesize 100M
 php_value post_max_size 100M
