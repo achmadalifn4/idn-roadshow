@@ -53,7 +53,8 @@ openssl req -x509 -new -nodes -key ca.key -sha256 -days 365 -out ca.pem
 ```
 Create config file
 ```
-cat << EOF >> config.txt
+nano config.txt
+
 authorityKeyIdentifier=keyid,issuer
 basicConstraints=CA:FALSE
 keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
@@ -73,6 +74,7 @@ openssl x509 -req -in domain.csr -CA ca.pem -CAkey ca.key -CAcreateserial -out d
 Konfigurasi virtualhost nginx
 ```
 nano /etc/nginx/sites-available/default
+
 server {
     listen 80;  # Untuk HTTP
     listen 443 ssl;
