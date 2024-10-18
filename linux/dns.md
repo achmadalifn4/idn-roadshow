@@ -18,7 +18,7 @@ cp db.local db.forward
 ```
 configure forward 
 ```
-vim db.forward
+nano db.forward
 ```
 ```
 ; BIND data file for local loopback interface
@@ -44,7 +44,7 @@ cp db.127 db.reverse
 ```
 configure reverse
 ```
-vim db.reverse
+nano db.reverse
 ```
 ```
 ; BIND reverse data file for local loopback interface
@@ -62,7 +62,7 @@ $TTL    604800
 ```
 ## Configure Zone
 ```
-vim named.conf.default-zones
+nano named.conf.default-zones
 ```
 ```
 zone "academy.id" {
@@ -83,7 +83,7 @@ apt install resolvonf
 ## Configure Resolvconf
 configure nameserver
 ```
-vim /etc/resolvconf/resolv.conf.d/head
+nano /etc/resolvconf/resolv.conf.d/head
 ```
 ```
 nameserver 172.23.15.150
