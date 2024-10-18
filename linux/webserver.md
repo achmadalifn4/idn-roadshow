@@ -10,8 +10,8 @@ install nginx
 ```
 apt install nginx
 ```
-## Uji Web Server
-uji via CLI/Web browser
+## Test Web Server
+Test via CLI/Web browser
 ```
 curl http://172.16.8.250
 
@@ -20,7 +20,7 @@ http://172.16.8.250
 ```
 
 ## custom domain
-konfigurasi /etc/nginx/sites-available/default
+Configure /etc/nginx/sites-available/default
 ```
 server_name academy.id;
 ```
@@ -29,7 +29,7 @@ setelah itu restart service nginx
 systemctl restart nginx
 ```
 
-## Uji Web Server
+## Test Web Server
 ```
 curl http://academy.id
 
@@ -71,7 +71,7 @@ openssl genrsa -out domain.key 2048
 openssl req -new -key domain.key -out domain.csr
 openssl x509 -req -in domain.csr -CA ca.pem -CAkey ca.key -CAcreateserial -out domain.crt -days 365 -sha256 -extfile config.txt
 ```
-Konfigurasi virtualhost nginx
+Configure virtualhost nginx
 ```
 nano /etc/nginx/sites-available/default
 
