@@ -1,7 +1,11 @@
-Create docker-compose.yml
+build directory
 ```
 mkdir web
-cat << EOF >> docker-compose.yml
+```
+Create docker-compose.yml
+```
+nano docker-compose.yml
+
 services:
 
   wordpress:
@@ -43,7 +47,6 @@ networks:
       config:
         - subnet: 172.18.0.0/24
           gateway: 172.18.0.1
-EOF
 ```
 Edit konfigurasi wordpress
 ```
