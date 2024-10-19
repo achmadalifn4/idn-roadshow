@@ -49,6 +49,8 @@ mkdir /etc/ssl/academy.id
 Generate CA
 ```
 openssl genrsa -des3 -out ca.key 2048
+```
+```
 openssl req -x509 -new -nodes -key ca.key -sha256 -days 365 -out ca.pem
 ```
 Create config file
