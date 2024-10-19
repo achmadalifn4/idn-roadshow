@@ -5,7 +5,8 @@ mkdir web
 Create docker-compose.yml
 ```
 nano docker-compose.yml
-
+```
+```
 services:
 
   wordpress:
@@ -53,6 +54,8 @@ networks:
 Edit konfigurasi wordpress
 ```
 docker exec -it wordpress /bin/bash
+```
+```
 cat << EOF >> .htaccess
 php_value upload_max_filesize 100M
 php_value post_max_size 100M
