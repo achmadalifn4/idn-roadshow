@@ -85,10 +85,10 @@ nano /etc/nginx/sites-available/proxy
 ```
 server {
     listen 80;  # Untuk HTTP
-    listen 443 ssl;
+#    listen 443 ssl;
 
-    ssl_certificate /etc/ssl/academy.id/domain.crt;
-    ssl_certificate_key /etc/ssl/academy.id/domain.key;
+#    ssl_certificate /etc/ssl/academy.id/domain.crt;
+#    ssl_certificate_key /etc/ssl/academy.id/domain.key;
 # Ganti dengan domain atau IP yang ingin Anda gunakan
 
     location / {
